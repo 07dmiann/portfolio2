@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2023 Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Additional styles for menu, sidebar, and footer */
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .header {
+      padding: 80px;
+      text-align: center;
+      background: none;
+      color: black;
+    }
+
+    .header h1 {
+      font-size: 40px;
+      text-align: center; /* Center the headline */
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #333;
+      z-index: 1;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 20px 25px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar a.right {
+      float: right;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .sidebar {
+      height: 100vh;
+      width: 200px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #f4f4f4;
+      overflow-x: hidden;
+      padding-top: 81px;
+      padding-bottom: 40px;
+      box-sizing: border-box;
+      z-index: 0;
+    }
+
+    .sidebar-inner {
+      height: calc(100% - 121px);
+      overflow-y: auto;
+    }
+
+    .sidebar a {
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background-color: #ddd;
+    }
+
+    .gallery {
+      /* Adjust or remove margin-left */
+      margin-left: 220px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .footer {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: black;
+      color: white;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    /* Style the figure elements */
+    .gallery figure {
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery figcaption {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Ensure the word "gallery" is visible */
+    .header h1 {
+      font-size: 40px;
+      color: #000000;
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.9);
+    }
+
+    .lightbox-content {
+      position: relative;
+      margin: auto;
+      padding: 20px;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .lightbox-content img {
+      width: 100%;
+      height: auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html" class="left">Home</a> 
+        <a href="abme.html" class="left">Bio</a>
+    </div>
+    
+    <div class="sidebar">
+        <div class="sidebar-inner">
+            <a href="2021gal.html">2021 Gallery</a>
+            <a href="2022gal.html">2022 Gallery</a>
+            <a href="2023gal.html">2023 Gallery</a>
+            <a href="2024gal.html">2024 Gallery</a>
+        </div>
+    </div>
+
+    <header class="header">
+        <h1>2023 Gallery</h1>
+    </header>
+    <main>
+        <section class="gallery">
+            <figure>
+                <img src="art23/eln pres.jpg" alt="Artwork 1" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/arm jpeg.jpg" alt="Artwork 2" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/Redraw.jpg" alt="Artwork 3" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/rtfight1 smol.jpg" alt="Artwork 4" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/arfight2.jpg" alt="Artwork 5" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/rtfight3.jpg" alt="Artwork 6" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/rtfight4 smler.jpg" alt="Artwork 7" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/rtfight5.jpg" alt="Artwork 8" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/ghost.jpg" alt="Artwork 9" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/bingge throne.jpg" alt="Artwork 10" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/vampirew nun.jpg" alt="Artwork 11" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/sy drago ao3 1flt.jpg" alt="Artwork 12" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/water idk.jpg" alt="Artwork 13" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/dissapointment.jpg" alt="Artwork 14" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/shadybug.jpg" alt="Artwork 15" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/lilith flt.jpg" alt="Artwork 16" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/aoa.jpg" alt="Artwork 17" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/stain.jpg" alt="Artwork 18" onclick="openLightbox(this)">
+            </figure>
+            <figure>
+                <img src="art23/dec pamic.jpg" alt="Artwork 19" onclick="openLightbox(this)">
+            </figure>
+            <!-- Add more images as needed -->
+        </section>
+    </main>
+    <div class="footer">
+        <p>&copy;Anna Dmitrieva</p>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="">
+        </div>
+    </div>
+
+    <script>
+    function openLightbox(img) {
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImg = document.getElementById("lightbox-img");
+        lightbox.style.display = "block";
+        lightboxImg.src = img.src;
+    }
+
+    function closeLightbox() {
+        var lightbox = document.getElementById("lightbox");
+        lightbox.style.display = "none";
+    }
+    </script>
+</body>
+</html>
